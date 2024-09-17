@@ -1,4 +1,4 @@
-namespace API
+namespace Core
 {
     public class WeatherForecast
     {

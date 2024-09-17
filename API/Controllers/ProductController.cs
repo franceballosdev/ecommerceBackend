@@ -1,10 +1,11 @@
-﻿using API.Data;
-using API.Entities;
+﻿
+using Core.Entities;
+using Infrastructure.Data;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-namespace API.Controllers
+namespace Core.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
