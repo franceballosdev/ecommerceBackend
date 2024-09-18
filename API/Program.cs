@@ -33,4 +33,18 @@ app.UseAuthorization();
 
 app.MapControllers();
 
+using var scope = app.Services.CreateScope();
+var Services = scope.ServiceProvider;
+var context = Services.GetRequiredService<StoreContext>();
+var Logger = Services.GetRequiredService<ILogger<Program>>();
+
+try
+{
+    await context.Database.MigrateAsync();
+}
+catch (Exception ex)
+{
+    Logger.LogError(ex, "Problem migrating data");
+}
+
 app.Run();
