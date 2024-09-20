@@ -1,4 +1,4 @@
-﻿
+﻿using API.Controllers;
 using API.Dtos;
 using AutoMapper;
 using Core.Entities;
@@ -13,7 +13,7 @@ namespace Core.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ProductController : ControllerBase
+    public class ProductController : BaseApiController
     {
 
         private readonly IProductRepository _productRepository;
